@@ -1,21 +1,11 @@
-<!--
- * @Author: Dalegac
- * @Date: 2021-09-07 13:58:34
- * @LastEditTime: 2021-09-09 17:43:58
- * @LastEditors: Dalegac
- * @Description: Fiber架构学习理解
--->
-
 ---
-
 title: What is Fiber
 author: Dale
 date: 2021-09-09 17:21:00 +0800
 categories: [Blogging, React]
-tags: [react,fiber]
+tags: [react, fiber]
 math: true
 mermaid: true
-
 ---
 
 ## 1. 设计理念
