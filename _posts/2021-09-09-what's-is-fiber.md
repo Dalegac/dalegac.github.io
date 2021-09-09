@@ -3,7 +3,7 @@ title: What is Fiber
 author: Dale
 date: 2021-09-09 17:21:00 +0800
 categories: [Blogging, React]
-tags: [react, fiber]
+tags: [react]
 math: true
 mermaid: true
 ---
