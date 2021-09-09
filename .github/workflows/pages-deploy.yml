@@ -2,7 +2,7 @@ name: 'Automatic build stable'
 on:
   push:
     branches:
-      - master
+      - 4-1-stable
     paths-ignore:
       - .gitignore
       - README.md
