@@ -1,9 +1,9 @@
 ---
-title: What is Fiber
+title: JavaScript数组方法
 author: Dale
 date: 2021-09-09 17:21:00 +0800
-categories: [Blogging, React]
-tags: [react, fiber]
+categories: [Blogging, JavaScript]
+tags: [JavaScript, Array]
 math: true
 mermaid: true
 ---
