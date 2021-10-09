@@ -10,16 +10,16 @@ mermaid: true
 
 ## 1. 设计理念
 
-### React 哲学
+### 1.1 React 哲学
 
 > 我们认为，React 是用 JavaScript 构建**快速响应**的大型 Web 应用程序的首选方式。他在 Facebook 和 Instagram 上表现优秀。
 
-#### 制约快速响应的因素
+#### 1.1.1 制约快速响应的因素
 
 - 计算能力——CPU 瓶颈(creating nodes,re-rendering)
 - 网络延迟——IO 瓶颈(data fetching,code splitting)
 
-#### 计算能力限制的解决方案————Time Slicing
+#### 1.1.2 计算能力限制的解决方案————Time Slicing
 
 主流浏览器刷新频率为 60Hz，即每（1000ms / 60Hz）16.6ms 浏览器刷新一次。我们知道，JS 可以操作 DOM，GUI 渲染线程与 JS 线程是互斥的。所以 JS 脚本执行和浏览器布局、绘制不能同时执行。在每 16.6ms 时间内，需要完成如下工作：
 
@@ -49,7 +49,7 @@ React 的 Concurrent Mode 启用了时间切片：此时我们的长任务被拆
 
 ## 2. Fiber
 
-### 什么是 Fiber？
+### 2.1 什么是 Fiber？
 
 > This Fiber is just a plain JavaScript object and it has one to one relationship with an instance. It manages the work for an instance so it keeps track of which instance is for using the property state node. It also keeps track of its relationships to other fibers in the tree.
 > [Lin Clark - A Cartoon Intro to Fiber - React Conf 2017](https://www.youtube.com/watch?v=ZCuYPiUIONs)
@@ -57,7 +57,7 @@ React 的 Concurrent Mode 启用了时间切片：此时我们的长任务被拆
 **Fiber 的含义**：作为静态的数据结构来说，每个 Fiber 节点对应一个 React element，保存了该组件的类型（函数组件/类组件/原生组件...）、对应的 DOM 节点等信息。
 作为动态的工作单元来说，每个 Fiber 节点保存了本次更新中该组件改变的状态、要执行的工作（需要被删除/被插入页面中/被更新...）
 
-### Fiber 的数据结构
+### 2.2 Fiber 的数据结构
 
 源文件[ReactFiber.new.js](https://github1s.com/facebook/react/blob/HEAD/packages/react-reconciler/src/ReactFiber.new.js)
 
@@ -115,7 +115,7 @@ function FiberNode(
 }
 ```
 
-### 调度器的优先级
+### 2.3 调度器的优先级
 
 源文件[SchedulerPriorities.js](https://github1s.com/facebook/react/blob/1fb18e22ae66fdb1dc127347e169e73948778e5a/packages/scheduler/src/SchedulerPriorities.js)
 
@@ -154,7 +154,7 @@ export const IdlePriority = 5;
 
 ## 3. Fiber 架构的工作原理
 
-### 工作阶段
+### 3.1 工作阶段
 
 Lin Clark 举了一个例子
 React 的工作流程分为两个阶段：
@@ -171,7 +171,7 @@ commit 阶段，react 会依次遍历 effectList，将这次的更新 commit 给
 
 ![遍历effectList](https://gitee.com/Dalegac/static-pic/raw/master/images/%E9%81%8D%E5%8E%86effectlist.jpg)
 
-### Double Buffering
+### 3.2 Double Buffering
 
 在构建 workInProgress Fiber 树时会尝试复用 current Fiber 树中已有的 Fiber 节点内的属性。类似于 canavas 的双缓存，这样能节省内存分配和垃圾回收的时间。
 ![双缓存机制](https://gitee.com/Dalegac/static-pic/raw/master/images/doublebuffering.png)
