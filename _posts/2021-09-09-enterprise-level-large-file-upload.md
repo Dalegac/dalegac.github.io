@@ -44,7 +44,7 @@ client （基于vue）
 │   ├── index.html
 │   └── spark-md5.min.js                    // MD5算法脚本
 ├── src
-│   ├── App.vue                             // 上传逐渐
+│   ├── App.vue                             // 上传组件
 │   ├── assets
 │   ├── main.js                             // vue工程入口
 │   └── plugins
