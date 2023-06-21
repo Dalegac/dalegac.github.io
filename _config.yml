@@ -80,7 +80,7 @@ theme_mode: # [light|dark]
 img_cdn: ""
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://github.com/Dalegac/static-pic/tree/master/images/avatar.jpg
+avatar: https://github.com/Dalegac/static-pic/tree/master/images/avatar.jpg?raw=true
 
 # boolean type, the global switch for ToC in posts.
 toc: true

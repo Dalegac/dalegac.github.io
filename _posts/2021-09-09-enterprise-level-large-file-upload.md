@@ -31,7 +31,7 @@ mermaid: true
 
 > 在慢启动状态，cwnd 的值以一个 MSS 开始并且每当传输的报文段首次被确认就增加 1 个 MSS，这一过程没过一个 RTT，发送速率就翻番。因此，TCP 发送速率起始慢，但是在慢启动阶段以指数增长。
 
-![TCP慢启动](https://github.com/Dalegac/static-pic/tree/master/images/TCP%E6%85%A2%E5%90%AF%E5%8A%A8.png)
+![TCP慢启动](https://github.com/Dalegac/static-pic/tree/master/images/TCP%E6%85%A2%E5%90%AF%E5%8A%A8.png?raw=true)
 
 ## 2. 工程目录
 
@@ -73,31 +73,31 @@ server
 
 ### 3.1 文件校验
 
-![文件校验](https://github.com/Dalegac/static-pic/tree/master/images/文件校验.png)
+![文件校验](https://github.com/Dalegac/static-pic/tree/master/images/文件校验.png?raw=true)
 
 ### 3.2 上传文件
 
-![上传文件](https://github.com/Dalegac/static-pic/tree/master/images/上传文件.png)
+![上传文件](https://github.com/Dalegac/static-pic/tree/master/images/上传文件.png?raw=true)
 
 ### 3.3 接收文件
 
 #### 3.3.1 /check
 
-![check](https://github.com/Dalegac/static-pic/tree/master/images/接收文件check.png)
+![check](https://github.com/Dalegac/static-pic/tree/master/images/接收文件check.png?raw=true)
 
 #### 3.3.2 /upload
 
-![upload](https://github.com/Dalegac/static-pic/tree/master/images/接收文件upload.png)
+![upload](https://github.com/Dalegac/static-pic/tree/master/images/接收文件upload.png?raw=true)
 
 #### 3.3.1 /merge
 
-![merge](https://github.com/Dalegac/static-pic/tree/master/images/接收文件merge.png)
+![merge](https://github.com/Dalegac/static-pic/tree/master/images/接收文件merge.png?raw=true)
 
 ## 4. 优化
 
 ### 4.1 文件 hash 值的计算
 
-![优化hash值计算](https://github.com/Dalegac/static-pic/tree/master/images/优化文件hash值计算.png)
+![优化hash值计算](https://github.com/Dalegac/static-pic/tree/master/images/优化文件hash值计算.png?raw=true)
 
 存在问题：文件较大时，直接计算 hash 值，时间过长，导致页面阻塞卡顿
 

@@ -119,7 +119,7 @@ console.log(isArr)  // true
 
 ## 3. 实例方法
 
-![js数组方法](https://github.com/Dalegac/static-pic/tree/master/images/js数组方法.jpg)
+![js数组方法](https://github.com/Dalegac/static-pic/tree/master/images/js数组方法.jpg?raw=true)
 
 ### 3.1 添加、删除元素
 
