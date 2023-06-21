@@ -161,20 +161,20 @@ React 的工作流程分为两个阶段：
 
 - render 阶段(可中断的)
 - commit 阶段(不可中断)
-  ![Fiber工作流程](https://gitee.com/Dalegac/static-pic/raw/master/images/Fiber%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.jpg)
+  ![Fiber工作流程](https://github.com/Dalegac/static-pic/tree/master/images/Fiber%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.jpg)
 
 render 阶段，从 workInProgress Tree 的根出发，深度优先遍历树，组件会经过 beginWork 和 completeWork 阶段，最后 react 将 workInProgress Tree 作为 pendingCommit，第一阶段到此结束。至此我们更新了 workInProgress Tree，并且得出了树中需要更新的结点列表 effectList。
-![effectList](https://gitee.com/Dalegac/static-pic/raw/master/images/effectList.jpg)
-![workInProgress Tree](https://gitee.com/Dalegac/static-pic/raw/master/images/pendingcommit.jpg)
+![effectList](https://github.com/Dalegac/static-pic/tree/master/images/effectList.jpg)
+![workInProgress Tree](https://github.com/Dalegac/static-pic/tree/master/images/pendingcommit.jpg)
 
 commit 阶段，react 会依次遍历 effectList，将这次的更新 commit 给 DOM。
 
-![遍历effectList](https://gitee.com/Dalegac/static-pic/raw/master/images/%E9%81%8D%E5%8E%86effectlist.jpg)
+![遍历effectList](https://github.com/Dalegac/static-pic/tree/master/images/%E9%81%8D%E5%8E%86effectlist.jpg)
 
 ### 3.2 Double Buffering
 
 在构建 workInProgress Fiber 树时会尝试复用 current Fiber 树中已有的 Fiber 节点内的属性。类似于 canavas 的双缓存，这样能节省内存分配和垃圾回收的时间。
-![双缓存机制](https://gitee.com/Dalegac/static-pic/raw/master/images/doublebuffering.png)
+![双缓存机制](https://github.com/Dalegac/static-pic/tree/master/images/doublebuffering.png)
 
 ## 4. 参考
 
