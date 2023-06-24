@@ -31,7 +31,7 @@ mermaid: true
 
 > 在慢启动状态，cwnd 的值以一个 MSS 开始并且每当传输的报文段首次被确认就增加 1 个 MSS，这一过程没过一个 RTT，发送速率就翻番。因此，TCP 发送速率起始慢，但是在慢启动阶段以指数增长。
 
-![TCP慢启动](https://github.com/Dalegac/static-pic/blob/master/images/TCP%E6%85%A2%E5%90%AF%E5%8A%A8.png?raw=true)
+![TCP慢启动](https://github.com/Dalegac/static-pic/raw/master/images/TCP%E6%85%A2%E5%90%AF%E5%8A%A8.png)
 
 ## 2. 工程目录
 
